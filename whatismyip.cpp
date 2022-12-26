@@ -73,6 +73,9 @@ void storeToFile(std::string newIP) {
             outFile << current << std::endl;
         }
     }
+    
+    inFile.close();
+    outFile.close();
 
     // Move the temp file to the storage file.
     std::system(("mv "+TEMP_FILENAME+" "+FILENAME).c_str());
